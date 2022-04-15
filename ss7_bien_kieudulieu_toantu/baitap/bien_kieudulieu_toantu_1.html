@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let vatLy;
+    let hoaHoc;
+    let sinhHoc;
+
+    vatLy = parseInt(prompt("Hãy nhập điểm môn vật lý"));
+    hoaHoc = parseInt(prompt("Hãy nhập điểm môn hoá học"));
+    sinhHoc = parseInt(prompt("Hãy nhập điểm môn sinh học"));
+
+    let average = (vatLy + hoaHoc + sinhHoc)/3;
+    document.write("Điểm trung bình :" + average + '<br>');
+    let sum = (vatLy + hoaHoc + sinhHoc);
+    document.write("Tổng điểm :" + sum );
+</script>
+</body>
+</html>
