@@ -12,7 +12,34 @@
         <th>From Currency</th>
         <th>To Currency</th>
     </tr>
+    <tr>
+        <td>
+            <input type="text" id="tienVN">
+        </td>
+        <td>
+            <select>
+               <option value="VN">VietNam</option>
+            </select>
+        </td>
+        <td>
+            <select>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button type="button" style="background-color: cornflowerblue" onclick="doiTien()">Convert</button>
+        </td>
+    </tr>
 </table>
 </form>
+<h4 id="ketQua"></h4>
+<script>
+    function doiTien() {
+        const DOLA = 23000
+        let VND = document.getElementById("tienVN").value;
+        let tienDo = VND * DOLA;
+        document.getElementById("ketQua").innerHTML ="Result:"+tienDo+"VND"
+    }
+</script>
 </body>
 </html>
