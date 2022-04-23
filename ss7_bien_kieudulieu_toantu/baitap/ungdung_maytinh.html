@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ứng dụng máy tính</title>
 </head>
 <body>
+<h1>Caculator</h1>
 <form>
-<h1 style="color: red">Caculator</h1>
-    <input style="background-color: aliceblue" type="text">
-    <input style="background-color: aliceblue" type="text"><br>
-    <button style="background-color: gainsboro" type="button">Addition(+)</button>
-    <button style="background-color: gainsboro" type="button">Subtraction(-)</button>
-    <button style="background-color: gainsboro" type="button">Multiplication(X)</button>
-    <button style="background-color: gainsboro" type="button">Division(/)</button>
+    <input type="text" id="giatri1">
+    <input type="text" id="giatri2"><br><br>
+    <input type="button" onclick="phepcong()" value=Addition(+)>
+    <input type="button" onclick="pheptru()" value=Subtraction(-)>
+    <input type="button" onclick="phepnhan()" value=Multiplicatio(X)>
+    <input type="button" onclick="phepchia()" value=Divison(/)>
 </form>
-<h3 id="ketQua"></h3>
+<p>Kết quả là: <span id="ketqua"></span></p>
+</body>
 <script>
-    function add(){
-        let numb1=+document.getElementById("val1").value;
-        let numb2=+document.getElementById("val2").value;
-        let sum=numb1+numb2;
-        document.getElementById("ketQua").innerHTML=sum
+    function phepcong(){
+        let so1=+document.getElementById("giatri1").value;
+        let so2=+document.getElementById("giatri2").value;
+        let tong=so1+so2;
+        document.getElementById("ketqua").innerHTML=tong
     }
-    function sub(){
-        let num1=+document.getElementById("val1").value;
-        let numb2=+document.getElementById("val2").value;
-        let subb=numb1-numb2;
-        document.getElementById("ketQua").innerHTML=subb
+    function pheptru(){
+        let so1=document.getElementById("giatri1").value;
+        let so2=document.getElementById("giatri2").value
+        let hieu=so1-so2;
+        document.getElementById("ketqua").innerHTML=hieu
     }
-    function mul(){
-        let numb1=+document.getElementById("val1").value;
-        let numb2=+document.getElementById("val2").value;
-        let mull=numb1*numb2;
-        document.getElementById("ketQua").innerHTML=mull
+    function phepnhan(){
+        let so1=document.getElementById("giatri1").value;
+        let so2=document.getElementById("giatri2").value
+        let tich=so1*so2;
+        document.getElementById("ketqua").innerHTML=tich
     }
-    function div(){
-        let numb1=+
+    function phepchia(){
+        let so1=document.getElementById("giatri1").value;
+        let so2=document.getElementById("giatri2").value
+        let thuong=so1/so2;
+        document.getElementById("ketqua").innerHTML=thuong
     }
-
 </script>
 </body>
 </html>

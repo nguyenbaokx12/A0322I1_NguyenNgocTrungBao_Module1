@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let timeCall = parseInt(prompt("so phut ma ho gia dinh da su dung:"));
+    let cuocPhi;
+    if (timeCall >= 4000) {
+        cuocPhi = timeCall * 400;
+        document.write("cuoc phi ma ho gia dinh phai tra la:" + cuocPhi);
+    } else if (timeCall >= 2500) {
+        cuocPhi = timeCall * 300;
+        document.write("cuoc phi ma ho gia dinh phai tra la:" + cuocPhi);
+    } else if (timeCall >= 1000) {
+        cuocPhi = timeCall * 200;
+        document.write("cuoc phi ma ho gia dinh phai tra la:" + cuocPhi);
+    } else {
+        cuocPhi = timeCall * 100;
+        document.write("cuoc phi ma ho gia dinh phai tra la:" + cuocPhi);
+    }
+</script>
+</body>
+</html>
