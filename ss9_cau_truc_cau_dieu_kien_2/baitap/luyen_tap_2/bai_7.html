@@ -7,17 +7,17 @@
 <body>
 <script>
 
-  let a = parseInt(prompt('Nhập số a: '));
+  let a = parseInt(prompt('Nhập số a: '))
   let b = parseInt(prompt('Nhập số b: '));
   let c = parseInt(prompt('Nhập số c: '));
   let d = b*b - 4*a*c;
-  let e = - b/2*a;
-  let f1 = (-b + Math.sqrt(d))/(2*a)
-  let f2 = (-b - Math.sqrt(d))/(2*a)
+  let e1 = (-b + Math.sqrt(d))/(2*a)
+  let e2 = (-b - Math.sqrt(d))/(2*a)
+  let f = - b/2*a;
   if (d > 0) {
-      alert('Phương trình có 2 nghiệm phân biệt là: x1= '+ f1+'; x2= ' +f2)
+      alert('Phương trình có 2 nghiệm phân biệt là: x1= '+ e1+'; x2= ' +e2)
   } else if (d == 0 ) {
-      alert('Phương trình có 2 nghiệm kép là: x1 = x2 = '+ e)
+      alert('Phương trình có 2 nghiệm kép là: x1 = x2 = '+ f)
   } else {
       alert('Phương trình vô nghiệm')
   }
