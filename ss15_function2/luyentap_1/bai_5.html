@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:beige ;">
+<h2 style="color:red ;">CHÒM SAO BẠN MUỐN BIẾT??</h2>
+<span style="color:rgb(0, 128, 128);font-weight: bold ">Các ngôi sao: </span>
+<span style="color:blue;font-weight: 500 ">Polaris,</span>
+<span style="color:green;font-weight: 500 ">Aldebaran,</span>
+<span style="color:pink;font-weight: 500">Deneb,</span>
+<span style="color:orange;font-weight: 500">Vega,</span>
+<span style="color:purple;font-weight: 500">Altair,</span>
+<span style="color:gray;font-weight: 500">Dubhe,</span>
+<span style="color:brown;font-weight: 500 ">Regulus</span><br><br>
+<input style="background-color: azure;" placeholder="Nhập ngôi sao vào đây" type="text" id="star">
+<button style="background-color: aqua ;" onclick="chomSao()">Tìm kiếm</button>
+<p style="color: rgb(18, 18, 127);font-weight: 700;" id="ketqua"></p>
+<script>
+    let ngoisao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    let chomsao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+    function chomSao() {
+        let c=document.getElementById("star").value 
+        let d=ngoisao.indexOf(c)
+        if (d!=-1){
+            document.getElementById('ketqua').innerText = "Ngôi sao "+ngoisao[d]+" có chòm sao là: " +chomsao[d]
+
+        }else {
+            alert('CHỈ NHẬP ĐƯỢC NHỮNG NGÔI SAO BÊN DƯỚI')
+        }
+    }
+</script>
+</body>
+</html>
