@@ -3,20 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+    body {
+        background-image: url("https://wallpaperaccess.com/full/1247375.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        text-align: center;
+        font-size: 25px;
+    }
+    .click{
+        opacity: 0.5;
+        transition: transform .2s;
+    }
+    .click:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    </style>
 </head>
-<body style="background-color:beige ;">
-<h2 style="color:red ;">CHÒM SAO BẠN MUỐN BIẾT??</h2>
-<span style="color:rgb(0, 128, 128);font-weight: bold ">Các ngôi sao: </span>
-<span style="color:blue;font-weight: 500 ">Polaris,</span>
-<span style="color:green;font-weight: 500 ">Aldebaran,</span>
-<span style="color:pink;font-weight: 500">Deneb,</span>
-<span style="color:orange;font-weight: 500">Vega,</span>
-<span style="color:purple;font-weight: 500">Altair,</span>
-<span style="color:gray;font-weight: 500">Dubhe,</span>
-<span style="color:brown;font-weight: 500 ">Regulus</span><br><br>
-<input style="background-color: azure;" placeholder="Nhập ngôi sao vào đây" type="text" id="star">
-<button style="background-color: aqua ;" onclick="chomSao()">Tìm kiếm</button>
-<p style="color: rgb(18, 18, 127);font-weight: 700;" id="ketqua"></p>
+<body>
+<h1 style="color:red ;">CHÒM SAO BẠN MUỐN BIẾT??</h1>
+<span style="color:rgb(19, 255, 3); ">Các ngôi sao: </span>
+<span style="color:blue">Polaris,</span>
+<span style="color:green">Aldebaran,</span>
+<span style="color:pink">Deneb,</span>
+<span style="color:orange">Vega,</span>
+<span style="color:purple">Altair,</span>
+<span style="color:gray">Dubhe,</span>
+<span style="color:brown">Regulus</span><br><br>
+<input style="background-color: azure; height: 25px;" placeholder="Nhập ngôi sao vào đây" type="text" id="star">
+<button class="click" style="background-color: aqua; height: 25px;" onclick="chomSao()">Tìm kiếm</button>
+<p style="color: white;font-weight: 700;" id="ketqua"></p>
 <script>
     let ngoisao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
     let chomsao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
@@ -27,7 +44,7 @@
             document.getElementById('ketqua').innerText = "Ngôi sao "+ngoisao[d]+" có chòm sao là: " +chomsao[d]
 
         }else {
-            alert('CHỈ NHẬP ĐƯỢC NHỮNG NGÔI SAO BÊN DƯỚI')
+            alert('! CHỈ NHẬP ĐƯỢC NHỮNG NGÔI SAO BÊN DƯỚI !')
         }
     }
 </script>
