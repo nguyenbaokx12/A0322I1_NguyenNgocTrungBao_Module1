@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt('Nhập số tiền lương của bạn'))
+        if(a<7000000){
+            alert('Lương của bạn: '+a+ " sau khi thuế 5% sẽ còn: "+ ((a * 95) / 100) + "VND")
+        }else if(a>=7000000 && a<15000000){
+            alert('Lương của bạn: '+a+ " sau khi thuế 10% sẽ còn: "+ ((a * 90) / 100) + "VND")
+        }else{
+            alert('Lương của bạn: '+a+ " sau khi thuế 20% sẽ còn: "+ ((a * 80) / 100) + "VND")
+
+        }
+    </script>
+</body>
+</html>

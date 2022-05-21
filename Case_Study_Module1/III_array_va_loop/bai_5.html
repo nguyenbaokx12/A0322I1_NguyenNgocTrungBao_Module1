@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+</head>
+<body>
+    <button onclick="list()">Bảng giá</button>
+    <button onclick="order()">Order</button>
+    <script>
+        function list(){
+            alert('1.Cafe 15k/ly   2.Cam vắt 20k/ly   3.Nước ép cà rốt 25k/ly   4.Nước ép cà chua 20k/ly   5.Nước lọc 2k/ly   6.Nước dừa 10k/ly   7.Thoát gọi món')
+        }
+
+        function order(){
+            while(true){
+            let a = parseInt(prompt('Bạn muốn mua gì hãy nhập (1->6)'))
+            switch(a){
+                case 1: alert('Bạn muốn gọi: Cafe với giá 15k/ly'); money=15; break;
+                case 2: alert('Bạn muốn gọi: Cam Vắt với giá 20k/ly'); money=20; break;
+                case 3: alert('Bạn muốn gọi: Nước Ép Cà Rốt với giá 25k/ly'); money=25; break;
+                case 4: alert('Bạn muốn gọi: Nước Ép Cà Chua với giá 20k/ly'); money=20; break; 
+                case 5: alert('Bạn muốn gọi: Nước Lọc với giá 2k/ly'); money=2; break;
+                case 6: alert('Bạn muốn gọi: Nước Dừa với giá 10k/ly'); money=10; break; 
+                default: break;
+            }
+            if(a==7){
+                break;
+            }
+            if(a>7){
+                alert('Không có món bạn muốn gọi')
+            }else{
+                let b=parseInt(prompt('Nhập số lượng bạn muốn mua'))
+                alert('Tổng tiền là: '+b*money+'.000VNĐ')
+            }
+            
+        }       
+        }
+    </script>
+</body>
+</html>
