@@ -8,15 +8,19 @@
 </head>
 <body>
     <script>
-      for(let i=1;i<4;i++){
-          for(let i=1;i<5;i++){
-            if(i==1||i==4||i==1||i==5){
-                document.write('*')
-            }else{
-                document.write('')
-            }
-          }document.write('<br>'+'*')
-      }
+        let a = []
+         for(let i=1;i<=6;i++){
+            let c = parseInt(prompt('Nhập 6 số vào đây'))
+            a.push(c)
+        }
+        let b = []
+        let tong = 0
+        for(let i=0;i<a.length;i++){
+            tong = 0
+            for(let j=0;j<=i;j++){
+                tong = tong +a[j]
+            }b.push(tong)
+        }document.write(b)
     </script>
 </body>
-</html> 
+</html>
