@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+<h4>Quản lý sách</h4>
+<p id="hienThi"></p>
+<script>
+    class Quanlisach{
+            constructor(masosach, tensach, namxuatban, soquyen, tinhtrang){
+                this.masosach = masosach;
+                this.tensach = tensach;
+                this.namxuatban = namxuatban;
+                this.soquyen = soquyen;
+                this.tinhtrang = tinhtrang;
+            }
+
+            getMasosach() {
+            return this.masosach;
+            }
+
+            getTensach() {
+            return this.tensach;
+            }
+
+            getNamxuatban(){
+                return this.namxuatban
+            }
+
+            getSoquyen(){
+                return this.soquyen
+            }
+
+            getTinhtrang(){
+                return this.tinhtrang
+            }
+
+            setMasosach() {
+                this.masosach = masosach;
+            }
+
+            setTensach() {
+                this.tensach = tensach;
+            }
+
+            setNamxuatban(){
+                this.namxuatban = namxuatban;
+            }
+
+            setSoquyen(){
+                this.soquyen = soquyen;
+            }
+
+            setTinhtrang(){
+                this.tinhtrang = tinhtrang;
+            }
+        }
+    
+        let listQuanlisach = [];
+        listQuanlisach.push(new Quanlisach(12345,"Toán","2000",3,"True"));
+        listQuanlisach.push(new Quanlisach(23456,"Văn","1998",4,"True"));
+        listQuanlisach.push(new Quanlisach(37456,"Tiếng Anh","1999",5,"False"));
+
+
+    function hienThi(danhSach) {
+        let tabeString = '<table border="1">' +
+            '<tr>' +
+            '<td>Mã số sách</td>' +
+            '<td>Tên sách</td>' +
+            '<td>Năm Xuất bản</td>' +
+            '<td>Số quyển</td>' +
+            '<td>Tình trạng</td>' + '</tr>'
+        for(let i=0; i<danhSach.length; i++){
+            tabeString += '<tr>' +
+                '<td>' + danhSach[i].getMasosach() + '</td>' +
+                '<td>' +  danhSach[i].getTensach() + '</td>' +
+                '<td>' +  danhSach[i].getNamxuatban() + '</td>' +
+                '<td>' +  danhSach[i].getSoquyen() + '</td>' +
+                '<td>' +  danhSach[i].getTinhtrang() + '</td>' + '</tr>'
+        }
+        document.getElementById("hienThi").innerHTML = tabeString;
+    }
+    hienThi(listQuanlisach);
+</script>
+</center>
+</body>
+
+<style>
+    *{
+        font-family: arial, sans-serif;
+    }
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+</html>
