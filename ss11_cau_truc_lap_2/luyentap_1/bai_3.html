@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n = parseInt(prompt("Input số Fibonacci cần hiển thị:"))
+  let a = 0;
+  let b = 1;
+  let c = " ";
+
+  for (let i = 1; i <= n; i++) {
+    if (i == 1 || i == 2) {
+      c += " 1 ";
+      a = 1;
+      b = 1;
+      continue;
+    }else {
+      let c = a + b;
+      c +=  c +" ";
+      a = b;
+      b = c;
+    }
+  }
+  document.write(c);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color: bisque">
+<span style="color: red">Từ</span> <span style="color: darkmagenta">Điển</span> <span style="color: darkgreen">Màu</span> <span style="color: darkblue">Mè</span><br>
+<input style="height: 20px; color: deeppink ; background-color: chartreuse" type="text" placeholder="Nhập từ cần tìm kiếm" id="nntb1">
+<button style="height: 30px; background-color: orange"  onclick="nntb2()">Tìm Kiếm</button>
+<h4 style="color: blue" id="ketQua"></h4>
+<script>
+    let tiengViet = ["khỉ", "chó", "mèo", "hổ", "sư tử", "voi", "rắn", "trâu"]
+    let tiengAnh= ["monkey", "dog", "cat", "tiger", "lion", "elephant", "snake", "buffalo"]
+    function nntb2() {
+        let a = document.getElementById('nntb1').value
+        let b = tiengAnh.indexOf(a)
+        let c = tiengViet.indexOf(a)
+        if (b != -1) {
+            document.getElementById("ketQua").innerText = tiengViet[b]
+        } else if (c != -1) {
+            document.getElementById("ketQua").innerText = tiengAnh[c]
+        } else {
+            alert("Dịch không ra")
+        }
+    }
+</script>
+</body>
+</html>
