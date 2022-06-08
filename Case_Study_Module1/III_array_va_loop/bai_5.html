@@ -8,36 +8,73 @@
     <title>Starbucks</title>
 </head>
 
-<body>
-    <h2>KÍNH CHÀO QUÝ KHÁCH</h2>
-    <button onclick="list()">Cách Order</button>
-    <button onclick="order()">Order</button>
-    <p id="ketQua"></p>
+<body style="background-color: rgb(245, 238, 229);">
+    <h2 style="color: #006341;">KÍNH CHÀO QUÝ KHÁCH ĐÃ ĐẾN STARBUCKS</h2>
+    <button style="color: #006341; background-color: bisque;" onclick="list1()">THỰC ĐƠN THỨC UỐNG</button>
+    <button style="color: #006341; background-color: bisque;" onclick="list2()">THỰC ĐƠN THỨC ĂN</button>
+    <button style="color: #006341; background-color: bisque;" onclick="order()">ORDER</button>
+    <p style="color: #006341;" id="ketQua1"></p>
+    <p style="color: #006341;" id="ketQua2"></p>
+    <h3 style="color: #006341;" id="thanhTien"></h3>
     <script>
-        function list() {
-            document.getElementById("ketQua").innerHTML = "<b>" + "BẤM PHÍM:" + "</b>" + "<br>" + "1.Cafe 15k/ly" + "<br>" + "2.Cam vắt 20k/ly" + "<br>" + "3.Nước ép cà rốt 25k/ly" + "<br>" + "4.Nước ép cà chua 20k/ly" + "<br>" + "5.Nước lọc 2k/ly" + "<br>" + "6.Nước dừa 10k/ly" + "<br>" + "7.Thoát gọi món"
+        function list1() {
+            document.getElementById("ketQua1").innerHTML = "<b>" + "BẤM PHÍM:" + "</b>" + "<br>"
+                + "1.Soy Milk - 30.000VNĐ" + "<br>"
+                + "2.Golden Monkey Black Tea - 45.000VNĐ" + "<br>"
+                + "3.Cappuccino - 60.000VNĐ" + "<br>"
+                + "4.Green Tea Latte - 60.000VNĐ" + "<br>"
+                + "5.Caffè Mocha - 70.000VNĐ" + "<br>"
+                + "6.Caramel Macchiato - 75.000VNĐ" + "<br>"
+                + "7.Matcha & Espresso Fusion - 75.000VNĐ" + "<br>"
+                + "8.Frappuccino Coffee - 90.000VNĐ" + "<br>"
+                + "9.Mango Passion Fruit - 90.000VNĐ"
+        }
+        function list2() {
+            document.getElementById("ketQua2").innerHTML = "<b>" + "BẤM PHÍM:" + "</b>" + "<br>"
+                + "10.Bánh Phô Mai Dâu - 30.000VNĐ" + "<br>"
+                + "11.Baguette - 45.000VNĐ" + "<br>"
+                + "12.Bánh Mì Baguette Paris - 45.000VNĐ" + "<br>"
+                + "13.Bánh Muffin Blueberry - 50.000VNĐ" + "<br>"
+                + "14.Bánh Croissant Phô Mai Thịt Nguội - 55.000VNĐ" + "<br>"
+                + "15.Bánh Croissant hạnh nhân - 55.000VNĐ" + "<br>"
+                + "16.Quiche Nấm & Hành Tây - 60.000VNĐ" + "<br>"
         }
         function order() {
+            let tongTienTra = 0
             while (true) {
-                let a = parseInt(prompt('Bạn muốn mua gì hãy nhập (1->6)'))
+                let a = parseInt(prompt('Nhấn Từ (1->16) Để Order  ||  Bấm Phím 0: Thanh Toán'))
                 switch (a) {
-                    case 1: alert('Bạn muốn order: Cafe với giá 15k/ly'); money = 15; break;
-                    case 2: alert('Bạn muốn order: Cam Vắt với giá 20k/ly'); money = 20; break;
-                    case 3: alert('Bạn muốn order: Nước Ép Cà Rốt với giá 25k/ly'); money = 25; break;
-                    case 4: alert('Bạn muốn order: Nước Ép Cà Chua với giá 20k/ly'); money = 20; break;
-                    case 5: alert('Bạn muốn order: Nước Lọc với giá 2k/ly'); money = 2; break;
-                    case 6: alert('Bạn muốn order: Nước Dừa với giá 10k/ly'); money = 10; break;
+                    case 1: alert('Soy Milk - 30.000VNĐ'); money = 30; break;
+                    case 2: alert('Golden Monkey Black Tea - 45.000VNĐ'); money = 45; break;
+                    case 3: alert('Cappuccino - 60.000VNĐ'); money = 60; break;
+                    case 4: alert('Green Tea Latte - 60.000VNĐ'); money = 60; break;
+                    case 5: alert('Caffè Mocha - 70.000VNĐ'); money = 70; break;
+                    case 6: alert('Caramel Macchiato - 75.000VNĐ'); money = 30; break;
+                    case 7: alert('Matcha & Espresso Fusion - 75.000VNĐ'); money = 75; break;
+                    case 8: alert('Frappuccino Coffee - 90.000VNĐ'); money = 90; break;
+                    case 9: alert('Mango Passion Fruit - 90.000VNĐ'); money = 90; break;
+                    case 10: alert('Bánh Phô Mai Dâu - 30.000VNĐ'); money = 30; break;
+                    case 11: alert('Bánh Muffin Blueberry - 45.000VNĐ'); money = 45; break;
+                    case 12: alert('Baguette - 45.000VNĐ'); money = 45; break;
+                    case 13: alert('Bánh Mì Baguette Paris - 50.000VNĐ'); money = 50; break;
+                    case 14: alert('Bánh Croissant Phô Mai Thịt Nguội - 55.000VNĐ'); money = 55; break;
+                    case 15: alert('Bánh Croissant Hạnh Nhân - 55.000VNĐ'); money = 55; break;
+                    case 16: alert('Quiche Nấm & Hành Tây - 60.000VNĐ'); money = 60; break;
+
                     default: break;
                 }
-                if (a == 7) {
-                    alert("Cảm ơn quý khách đã order")
+                if (a == 0) {
+                    alert("Cảm Ơn Quý Khách")
+                    document.getElementById("thanhTien").innerHTML = "Tổng Tiền Bạn Trả Là: " + tongTienTra + ".000VNĐ"
                     break;
                 }
-                if (a > 7) {
-                    alert('Không có món bạn muốn gọi')
+                if (a < 0 || a > 16) {
+                    alert('Không Có Món Bạn Muốn Order')
                 } else {
-                    let b = parseInt(prompt('Nhập số lượng bạn muốn mua'))
-                    alert('Tổng tiền là: ' + b * money + '.000VNĐ')
+                    let b = parseInt(prompt('Nhập Số Lượng: '))
+                    let tongGia = b * money
+                    alert('Tổng Tiền Là: ' + tongGia + '.000VNĐ')
+                    tongTienTra = tongTienTra + tongGia
                 }
 
             }
